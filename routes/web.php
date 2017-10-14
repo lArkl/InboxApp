@@ -1,4 +1,6 @@
 <?php
+use App\Workshop;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,7 +12,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('workshops','WorkshopController');
+
+Route::resource('applications', 'ApplicationController');
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect('home2');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+

@@ -1,0 +1,53 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+ {!! Form::open(['url' => 'workshops', 'method' => 'get']) !!}
+ <div class="input-group">
+   {!! Form::text('search_entry', null, ['class' => 'form-control', 'placeholder' => $search_placeholder ]) !!}
+   <span class="input-group-btn">{!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}</span>
+ </div>
+ {!! Form::close() !!}
+ <hr/>
+ @foreach($workshops->chunk(4) as $items)
+  <div class="row">
+   @foreach($items as $item)
+    <div class="col-md-3">
+      <div class="thumbnail text-center">
+
+        <div class="caption">
+	  
+	  <img src="https://laravelcollective.com/img/full-logo.png" class="img-responsive" alt="...">
+
+          <p>
+	    <div><span class="label label-info col-xs-12">Program</span>{{$item->name}}</div>
+	    <div><span class="label label-info col-xs-12">Level</span>{{$item->program}}</div>
+	    
+	    <div class="row">
+	      <div class="col-xs-6"><span class="label label-info">Start</span><br/>{{$item->program}}</div>
+	      <div class="col-xs-6"><span class="label label-info">Finish</span><br/>{{$item->program}}</div>
+	    </div>
+	    
+	    <div><span class="label label-info col-xs-12">Schedule</span>{{$item->program}}</div>
+	  </p>
+
+	  <div class="row">
+	    <div class="col-lg-offset-3 col-lg-6">
+	      <div class="input-group">
+		<div class="input-group-btn">
+	          <div class="btn btn-default col-xs-6">About</div>
+	          <div class="btn btn-success col-xs-6">Apply</div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+      </div>
+    </div>
+   @endforeach
+  </div>
+ @endforeach
+ <div class="pull-right">{{ $workshops->links() }}</div>
+</div>
+@endsection
