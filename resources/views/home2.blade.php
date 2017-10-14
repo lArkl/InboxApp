@@ -2,6 +2,7 @@
 @section('page_heading','Dashboard')
 @section('section')
            <!-- /.row -->
+            
             <div class="col-sm-12">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
@@ -12,7 +13,7 @@
                                     <i class="fa fa-book fa-5x" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    {{--<div class="huge">{{$nApps}}</div--}}
+                                    <div class="huge">{{$nApps}}</div>
                                     <div>New Applications!</div>
                                 </div>
                             </div>
@@ -34,7 +35,7 @@
                                     <i class="fa fa-bell-o fa-5x" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    {{--<div class="huge">{{$nStatus}}</div>--}}
+                                    <div class="huge">{{$nStatus}}</div>
                                     <div>Applications Pending!</div>
                                 </div>
                             </div>
@@ -56,7 +57,7 @@
                                     <i class="fa fa-hand-o-up fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    {{--<div class="huge">{{ $nWorkP }}</div>--}}
+                                    <div class="huge">{{ $nWorkP }}</div>
                                     <div>New Workshop Requests!</div>
                                 </div>
                             </div>
@@ -78,7 +79,7 @@
                                     <i class="fa fa-briefcase fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    {{--<div class="huge">{{$nWork}}</div>--}}
+                                    <div class="huge">{{$nWork}}</div>
                                     <div>Workshops Available!</div>
                                 </div>
                             </div>
@@ -93,6 +94,7 @@
                     </div>
                 </div>
             </div>
+            -->
             <!-- /.row -->
             
             

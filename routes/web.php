@@ -17,8 +17,8 @@ Route::resource('workshops','WorkshopController');
 Route::resource('applications', 'ApplicationController');
 
 Route::get('/', function () {
-    //return view('welcome');
-    return redirect('home2');
+    return redirect('workshops');
+    //return view('home2');
 });
 
 Auth::routes();
